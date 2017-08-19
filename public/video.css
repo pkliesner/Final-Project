@@ -1,0 +1,99 @@
+html {
+  font-family: calibri;
+  font-size: 16pt;
+  color: black;
+  background-color: #2d2d2d;
+  text-align: center;
+}
+
+div {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div#header {
+  height: 45px;
+  background: #5f6f77;
+  margin: 0;
+  width: 100%;
+}
+
+#gallery-title{
+  font-size: 24pt;
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-align:left;
+}
+#upload {
+  visibility: hidden;
+  font-size: 18px;
+  height: 30px;
+  width: 100px;
+  text-align:center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#search {
+  visibility: hidden;
+}
+table.headerTable {
+  color: white;
+}
+
+#video {
+  width: 1000px;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: white;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#info {
+  width: 970px;
+  height: 180px;
+  padding: 30px;
+  margin: 30px;
+  text-align: justify;
+  border-radius: 5px;
+  background-color: white;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#videoName {
+  font-size: 32pt;
+  width: 500px;
+  margin: 0px;
+}
+#videoDate {
+  margin-left: 40px;
+}
+#videoViews {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+#videoDescription {
+  font-size: 20pt;
+}
+#thumbs {
+  margin-left: 500px;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+#home-link {
+  color:white;
+}

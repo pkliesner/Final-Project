@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%= context.videoName %></title>
+        <link href="public/video.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="public/favicon.ico">
+    </head>
+    <body>
+        <div id="header">
+            <table class= "headerTable">
+                <tr>
+                    <th width="25%" style="text-align:left;"><div id="gallery-title"><a href="/" id="home-link"><%= context.title %></a></div></th>
+                    <th width="35%" style="text-align:center;"><button type="button" id="upload">Upload!</button></th>
+                    <th width="25%" style="text-align:right;"><input id="search" type="text" name="search"></th>
+                </tr>
+            </table>
+		</div>
+
+        <div id="video">
+          <%= context.videoFile %>
+        </div>
+
+        <div id="info">
+            <div id= "videoName"><%= context.videoName %></div>
+            <table class= "videoInfoTop" border=0>
+                <tr>
+                    <td width="95%">
+                        <div id = "videoDate">Upload Date: <%= context.uploadDate %></div>
+                        <div id = "videoViews">Views: <%= context.views %></div>
+                    </td>
+                    <td id="thumbs" width="50px">
+                        <table border=0>
+                            <tr>
+                                <td id= "thumbUp">  
+                                    <img src="/public/thumb-up.png" width="40px">
+                                </td>
+                                <td>
+                                    <h3><%= context.upvotes %></h3>
+                                </td>
+                                <td id= "thumbDown">
+                                    <img src="/public/thumb-down.png" width="40px">
+                                </td>
+                                <td>
+                                    <h3><%= context.downvotes %></h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </td> 
+                </tr>
+                <tr> 
+                    <td><div id = "videoDescription"><%= context.videoDescription %></div></td>
+                </tr>
+            </table>
+        </div>
+        <!--<script src="video.js"></script>-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </body>
+</html>

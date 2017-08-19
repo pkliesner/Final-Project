@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title><%= context.title %></title>
+        <link href="gallery.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="public/favicon.ico">
+    </head>
+    <body>
+        <div id="header">
+            <table class= "headerTable">
+                <tr>
+                    <th width="25%" style="text-align:left;"><div id="gallery-title"><a href="/" id="home-link"><%= context.title %></a></div></th>
+                    <th width="35%" style="text-align:center;"><button type="button" id="upload">Upload!</button></th>
+                    <th width="25%" style="text-align:right;">Search: <input id="search" type="text" name="search"></th>
+                </tr>
+            </table>
+		</div>
+
+     <div id="gallery-div">
+
+        <div id="upload-form"  style="display:none;">
+            <h1>Upload A Video:</h1>
+
+            <form id="video-upload-form" action="" method="POST" enctype="multipart/form-data">
+                        <label for="videoFile">
+                            <table width="100%"><tr>
+                            <td style="text-align: left;" width="50%">Video File:</td>
+                            <td><input id="videoFile" type="file" name="videoFile" style="text-align: right;"></td>
+                        </tr></table>
+                        </labeL>
+                        <br>
+                        <label for="videoThumbnail">
+                            <table width="100%"><tr>
+                            <td style="text-align: left;" width="50%">Video Thumbnail:</td>
+                            <td><input type="file" name="videoThumbnail" style="text-align: right;"></td>
+                        </tr></table>
+                        </label>
+                        <br>
+                        <label for="videoDescription">
+                            <table width="100%"><tr>
+                            <td style="text-align: left;" width="50%">Video Description:</td>
+                            <td><input type="text" id="videoDescription" name="videoDescription" style="text-align: left;" width="50%"></td>
+                        </tr></table>
+                        </label>
+                        <input type="submit" value="Upload Video">
+                    </form>
+            </div>
+
+            <button id="sort-names" type="button">Sort By Names</button>
+            <button id="sort-popularity" type="button">Sort By Popularity</button>
+            <button id="sort-views" type="button">Sort By Views</button>
+
+            <%= context.videoTags %>
+        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="gallery.js"></script>
+      </body>
+</html>
